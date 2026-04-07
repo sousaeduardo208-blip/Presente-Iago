@@ -426,6 +426,10 @@ function entrar() {
 
 function abrirCard(elemento) {
   elemento.classList.toggle("ativa");
+
+  const som = document.getElementById("clickSound");
+  som.currentTime = 0;
+  som.play();
 }
 
 </script>
