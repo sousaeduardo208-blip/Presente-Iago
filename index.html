@@ -193,6 +193,21 @@ loading="lazy">
   font-size: 16px;
 }
 
+#entrada {
+  animation: aparecerEntrada 1s ease;
+}
+
+@keyframes aparecerEntrada {
+  from {
+    opacity: 0;
+    transform: scale(1.1);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
 </style>
 
 </head>
