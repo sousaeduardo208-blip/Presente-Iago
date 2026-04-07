@@ -328,17 +328,18 @@ dias.forEach((dia, index) => {
 document.getElementById("conteudo").innerHTML = html;
 
 const observer = new IntersectionObserver((entries) => {
-  entries.forEach((entry, index) => {
+  entries.forEach(entry => {
     if (entry.isIntersecting) {
-      setTimeout(() => {
-        entry.target.classList.add("show");
-      }, index * 200);
-      observer.unobserve(entry.target); // 👈 evita repetir
+      entry.target.classList.add("show");
     }
   });
-}, {
-  threshold: 0.3
 });
+
+setTimeout(() => {
+  document.querySelectorAll(".mensagem").forEach(el => {
+    observer.observe(el);
+  });
+}, 200);
 
 setTimeout(() => {
   document.querySelectorAll(".mensagem").forEach(el => {
