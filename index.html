@@ -242,9 +242,11 @@ const observer = new IntersectionObserver((entries) => {
   });
 });
 
-document.querySelectorAll(".mensagem").forEach(el => {
-  observer.observe(el);
-});
+setTimeout(() => {
+  document.querySelectorAll(".mensagem").forEach(el => {
+    observer.observe(el);
+  });
+}, 200);
 
 </script>
 
