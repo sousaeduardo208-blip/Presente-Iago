@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+no <!DOCTYPE html>
 <html lang="pt-br">
 <head>
 <meta charset="UTF-8">
@@ -258,6 +258,15 @@ loading="lazy">
 .mensagem.ativa {
   transform: scale(1.02);
 
+.mensagem img {
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all 0.5s ease;
+}
+
+.mensagem.ativa img {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 </style>
