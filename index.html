@@ -234,6 +234,18 @@ dias.forEach((dia, index) => {
 
 document.getElementById("conteudo").innerHTML = html;
 
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("show");
+    }
+  });
+});
+
+document.querySelectorAll(".mensagem").forEach(el => {
+  observer.observe(el);
+});
+
 </script>
 
 </body>
