@@ -7,11 +7,19 @@
 <style>
 body {
   margin: 0;
-  font-family: 'Arial', sans-serif;
-  background: linear-gradient(135deg, #ffdde1, #ee9ca7);
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #1e1e2f, #3a0f2e, #ff4d6d);
+  background-size: 300% 300%;
+  animation: fundoAnimado 10s ease infinite;
   display: flex;
   justify-content: center;
   padding: 20px;
+}
+
+@keyframes fundoAnimado {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
 .container {
