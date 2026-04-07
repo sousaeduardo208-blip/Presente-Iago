@@ -329,6 +329,15 @@ setTimeout(() => {
     observer.observe(el);
   });
 }, 200);
+function entrar() {
+  const entrada = document.getElementById("entrada");
+  entrada.style.opacity = "0";
+  entrada.style.transition = "0.8s";
+
+  setTimeout(() => {
+    entrada.style.display = "none";
+  }, 800);
+}
 
 </script>
 
