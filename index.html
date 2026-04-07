@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="pt-br">
 <head>
 <meta charset="UTF-8">
@@ -332,9 +332,12 @@ const observer = new IntersectionObserver((entries) => {
     if (entry.isIntersecting) {
       setTimeout(() => {
         entry.target.classList.add("show");
-      }, index * 150); // delay entre os cards
+      }, index * 200);
+      observer.unobserve(entry.target); // 👈 evita repetir
     }
   });
+}, {
+  threshold: 0.3
 });
 
 setTimeout(() => {
