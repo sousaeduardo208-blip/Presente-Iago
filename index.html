@@ -429,7 +429,10 @@ function entrar() {
   const entrada = document.getElementById("entrada");
   entrada.style.opacity = "0";
   entrada.style.transition = "0.8s";
-  document.querySelector(".container").style.opacity = "1";
+
+  const container = document.querySelector(".container");
+  container.style.display = "flex";
+  container.style.opacity = "1";
 
   setTimeout(() => {
     entrada.style.display = "none";
